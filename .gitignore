@@ -1,15 +1,16 @@
+# Vercel configuration
 .vercel
+
+# Log files
 *.log
+
+# Compiled Python files
 *.pyc
 __pycache__
-db.sqlite3
-media
 
-# Environments
+# Virtual environments
 .env
-.venv
+.venv/
 env/
 venv/
 ENV/
-env.bak/
-venv.bak/

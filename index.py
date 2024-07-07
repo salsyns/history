@@ -3,6 +3,7 @@ import json
 import datetime
 from dotenv import load_dotenv
 from telethon import TelegramClient, events, Button
+from telethon.sessions import StringSession
 from PIL import Image
 
 # Load environment variables from .env file
@@ -16,7 +17,7 @@ owner_id = int(os.getenv('OWNER_ID'))  # Convert to int if OWNER_ID is an intege
 string_session = os.getenv('STRING_SESSION')
 
 # Initialize TelegramClient with StringSession
-client = TelegramClient(string_session, api_id, api_hash)
+client = TelegramClient(StringSession(string_session), api_id, api_hash)
 
 # Start the client with bot token
 client.start(bot_token=bot_token)
