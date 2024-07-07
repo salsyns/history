@@ -9,7 +9,7 @@ from PIL import Image
 load_dotenv()
 
 # Retrieve values from environment variables
-api_id = int(os.getenv('API_ID'))
+api_id = os.getenv('API_ID')
 api_hash = os.getenv('API_HASH')
 bot_token = os.getenv('BOT_TOKEN')
 owner_id = int(os.getenv('OWNER_ID'))  # Convert to int if OWNER_ID is an integer
@@ -56,7 +56,7 @@ async def start(event):
     await event.reply(
         'Welcome! Use the /check <user_id> command to check user history.',
         buttons=[
-            [Button.url('Add to Group', 'https://t.me/YOUR_BOT_USERNAME?startgroup=true')]
+            [Button.url('Add to Group', 'https://t.me/sanghistory_bot?startgroup=true')]
         ]
     )
 
